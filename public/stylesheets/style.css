@@ -6,9 +6,24 @@ html, body {
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
-#mymap {
-  height: 100%;
+.map {
+    height: 21em;
+    width: 21em;
+    margin:0.5em;
+    border: 0.2em solid darkgreen;
+    border-radius: 0.5em;
+    display: inline-block;
+}
+.map-footer {
+    width: 21em;
+    margin:0.5em;
+    border: 0.2em solid darkgreen;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
 }

@@ -2,5 +2,12 @@ extends layout
 
 block content
   h3= title
-  div(id='mymap')
+  div(id='stdMap', class='map')
+  div(id='satelliteMap', class='map')
+  div(id='hybridMap', class='map')
+  div(id='terrainMap', class='map')
+  div(class='map-footer') Roadmap
+  div(class='map-footer') Satellite
+  div(class='map-footer') Hybrid
+  div(class='map-footer') Terrain
   script(src='/javascripts/map.js')
