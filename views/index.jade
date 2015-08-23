@@ -2,12 +2,16 @@ extends layout
 
 block content
   h3= title
-  div(id='stdMap', class='map')
-  div(id='satelliteMap', class='map')
-  div(id='hybridMap', class='map')
-  div(id='terrainMap', class='map')
-  div(class='map-footer') Roadmap
-  div(class='map-footer') Satellite
-  div(class='map-footer') Hybrid
-  div(class='map-footer') Terrain
+  div
+      div(id='stdMap', class='map')
+      div(id='satelliteMap', class='map')
+      div(id='hybridMap', class='map')
+      div(id='terrainMap', class='map')
+      div(class='map-footer') Roadmap
+      div(class='map-footer') Satellite
+      div(class='map-footer') Hybrid
+      div(class='map-footer') Terrain
+  div
+      h4= 'Markers and Information Windows'
+      div(id='mapWithMarker', class='map-wide')
   script(src='/javascripts/map.js')

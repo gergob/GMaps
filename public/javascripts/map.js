@@ -41,5 +41,30 @@ function initializeMap() {
             zoom: 6,
             mapTypeId: google.maps.MapTypeId.TERRAIN
         });
+
+        initMapWithMarker();
+    }
+}
+
+function initMapWithMarker() {
+    if (google && google.maps && typeof(google.maps.Map) === 'function') {
+
+        var position = {lat: 43.2678, lng: -2};
+
+        //
+        // Marker
+        //
+        var mapWithMarkerElement = document.getElementById('mapWithMarker');
+        var mapWithMarker = new google.maps.Map(mapWithMarkerElement, {
+            center: position,
+            zoom: 6
+        });
+
+        var marker = new google.maps.Marker({
+            position: position,
+            map: mapWithMarker,
+            title: 'San Sebastian'
+        });
+
     }
 }
