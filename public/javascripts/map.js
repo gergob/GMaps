@@ -42,11 +42,11 @@ function initializeMap() {
             mapTypeId: google.maps.MapTypeId.TERRAIN
         });
 
-        initMapWithMarker();
+        initMapWithMarkerAndWindowInfo();
     }
 }
 
-function initMapWithMarker() {
+function initMapWithMarkerAndWindowInfo() {
     if (google && google.maps && typeof(google.maps.Map) === 'function') {
 
         var position = {lat: 43.2678, lng: -2};
@@ -64,6 +64,14 @@ function initMapWithMarker() {
             position: position,
             map: mapWithMarker,
             title: 'San Sebastian'
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content: 'Here is the beautiful city of <strong>San Sebastian</strong>'
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(mapWithMarker, marker);
         });
 
     }
